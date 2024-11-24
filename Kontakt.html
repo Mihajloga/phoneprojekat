@@ -27,8 +27,7 @@
 </head>
 <body>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v21.0"></script>
+
     <h1 class="line">Land line</h1>
     <h2>Prodavnica mobilnih telefona</h2>
 
@@ -72,9 +71,13 @@
                 
                 <p>Unesite vaše pitanje ili problem:</p>
                 <input type="text" id="question" class="popunavanjeforme" placeholder="Vaše pitanje">
-              
 
-               <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+                
+                
+                <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v21.0"></script>
+               <button type="button"> <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true">like</div></button>
+              
                 <button type="button" id="prijava">Pošalji</button>
             </form>
         </div>
