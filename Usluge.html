@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="icon" href="fav/favicon.ico">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="Stylesheet" href="Stylesheet.css">
     <script src="https://kit.fontawesome.com/590dcf6971.js" crossorigin="anonymous"></script>
+    <title>Prodavnica mobilnih telefona</title>
+</head>
+<body>
+    <h1 class="line">Land line</h1>
+    <h2>Prodavnica mobilnih telefona</h2>
     <style>
         :root {
             --background-color: skyblue;
@@ -23,12 +25,6 @@
             background-color: var(--background-color);
         }
     </style>
-
-    <title>Prodavnica mobilnih telefona</title>
-</head>
-<body>
-    <h1 class="line">Land line</h1>
-    <h2>Prodavnica mobilnih telefona</h2>
 
     <button id="Menjatemo">Tema</button>
     <script>
@@ -44,7 +40,6 @@
         }
         document.getElementById('Menjatemo').addEventListener('click', menjaboju);
     </script>
-
     <nav class="navbar">
         <ul>
             <li><a href="ONama.html">O nama</a></li>
@@ -55,44 +50,41 @@
     </nav>
 
     <main>
-        <h1>Ovde možete videti sve proizvode koje nudimo i njihovu cenu.</h1>
-
-        <div class="proizvodi">
-            <div class="box">
-                <img class="telefoni_slike" src="Slike/samsung_s22.jpg" alt="Samsung Galaxy S22+">
-                <p>Samsung Galaxy S22+</p>
-                <p>1100eur</p>
-                <a href="Kupovina.html">Kupi</a>
-            </div>
-            
-            <div class="box">
-                <img class="telefoni_slike" src="Slike/iphone_11.jpg" alt="iPhone 11x">
-                <p>iPhone 11x</p>
-                <p>1000eur</p>
-                <a href="Kupovina.html">Kupi</a>
-            </div>
-            
-            <div class="box">
-                <img class="telefoni_slike" src="Slike/samsung_galaxy_s20.jpg" alt="Samsung Galaxy S20+">
-                <p>Samsung Galaxy S20+</p>
-                <p>900eur</p>
-                <a href="Kupovina.html">Kupi</a>
-            </div>
-            
-            <div class="box">
-                <img class="telefoni_slike" src="Slike/honor_x9_4g.jpg" alt="Honor X9">
-                <p>Honor X9</p>
-                <p>800eur</p>
-                <a href="Kupovina.html">Kupi</a>
-            </div>
-            
-            <div class="box">
-                <img class="telefoni_slike" src="Slike/motorola_g_plus.jpg" alt="Motorola G Plus">
-                <p>Motorola G Plus</p>
-                <p>700eur</p>
-                <a href="Kupovina.html">Kupi</a>
-            </div>
-        </div>
+        <h1>Ovde možete videti sve usluge koje nudimo i njihovu cenu.</h1>
+        <div class="usluge" id="usluge"></div>
     </main>
+
+    <script>
+    
+        let usluge = [
+            {
+                naziv: "Zamena ekrana",
+                cena: "100eur",
+                link: "Popravka.html"
+            },
+            {
+                naziv: "Popravka kućista",
+                cena: "500eur",
+                link: "Popravka.html"
+            },
+            {
+                naziv: "Prebacivanje memorije",
+                cena: "200eur",
+                link: "Popravka.html"
+            }
+        ];
+
+        let uslugeDiv = document.getElementById('usluge');
+        usluge.forEach(usluga => {
+            let div = document.createElement('div');
+            div.className = 'boxy';
+            div.innerHTML = `
+                <p>${usluga.naziv}</p>
+                <p>${usluga.cena}</p>
+                <a href="${usluga.link}">kupi</a>
+            `;
+            uslugeDiv.appendChild(div);
+        });
+    </script>
 </body>
 </html>
