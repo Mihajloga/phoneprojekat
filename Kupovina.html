@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <link rel="icon" href ="fav/favicon.ico">
    
+    <link rel="icon" href="fav/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Stylesheet.css">
     <script src="https://kit.fontawesome.com/590dcf6971.js" crossorigin="anonymous"></script>
     <title>Prodavnica mobilnih telefona</title>
-</head>
-<body>
-    <h1 class="line">Land line</h1>
-    <h2>Prodavnica mobilnih telefona</h2>
     <style>
         :root {
             --background-color: skyblue;
@@ -28,6 +24,10 @@
             background-color: var(--background-color);
         }
     </style>
+</head>
+<body>
+    <h1 class="line">Land line</h1>
+    <h2>Prodavnica mobilnih telefona</h2>
 
     <button id="Menjatemo">Tema</button>
     <script>
@@ -60,7 +60,7 @@
                 <input type="text" id="ImeKU" class="kup_popuni_forme">
 
                 <p>Broj telefona:</p>
-                <input type="text" id="BrojKU" inputmode="numeric" class="kup_popuni_forme">
+                <input type="text" id="BrojKU" inputmode="numeric" pattern="\d*" class="kup_popuni_forme">
 
                 <p>E-mail:</p>
                 <input type="email" id="emailKU" class="kup_popuni_forme">
@@ -87,8 +87,8 @@
     </main>
 
     <script>
-        function generateFileContent(ImeKU, telKU,emailKU, selectedTelKU) {
-            return `Ovo je vaša porudzbina koja stiže za 8 dana\n\nIme i prezime: ${ImeKU}\nBroj telefona: ${telKU}\nE-mail: ${emailKU}\nTelefon: ${selectedTelKU}`;
+        function generateFileContent(ImeKU, BrojKU, emailKU, selectedTelKU) {
+            return `Ovo je vaša porudzbina koja stiže za 8 dana\n\nIme i prezime: ${ImeKU}\nBroj telefona: ${BrojKU}\nE-mail: ${emailKU}\nTelefon: ${selectedTelKU}`;
         }
 
         document.getElementById('prijava').addEventListener('click', function() {
