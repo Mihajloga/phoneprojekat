@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="icon" href ="fav/favicon.ico">
+    
+    <link rel="icon" href="fav/favicon.ico">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Stylesheet.css">
     <script src="https://kit.fontawesome.com/590dcf6971.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <h1 class="line">Land line</h1>
-    <h2>Prodavnica mobilnih telefona</h2>
     <style>
         :root {
             --background-color: skyblue;
@@ -27,6 +23,11 @@
             background-color: var(--background-color);
         }
     </style>
+    <title>Prodavnica mobilnih telefona</title>
+</head>
+<body>
+    <h1 class="line">Land line</h1>
+    <h2>Prodavnica mobilnih telefona</h2>
 
     <button id="Menjatemo">Tema</button>
     <script>
@@ -59,12 +60,13 @@
                 <input type="text" id="punoime" class="popravkaforme">
 
                 <p>Broj telefona:</p>
+                <!-- inputmode користан за мобилне уређаје, али може имати ограничену подршку у неким прегледачима -->
                 <input type="text" id="brojtel" inputmode="numeric" class="popravkaforme">
 
                 <p>E-mail:</p>
                 <input type="email" id="Email" class="popravkaforme">
 
-                <p>Unesite telefon koji hocete da kupite telefon:</p>
+                <p>Unesite telefon koji hocete da kupite:</p>
                 <input type="checkbox" id="popravkaekran" class="popvravkapopuniformu">
                 <label for="popravkaekran">Zamena ekrana</label><br>
                 <input type="checkbox" id="popravkakucista" class="popvravkapopuniformu">
@@ -80,30 +82,21 @@
 
     <script>
         document.getElementById('submitBtn').addEventListener('click', function() {
-           
             let punoime = document.getElementById('punoime').value;
-            
             let brojtel = document.getElementById('brojtel').value;
-            
             let Email = document.getElementById('Email').value;
-           
+
             let popravkaekran = document.getElementById('popravkaekran').checked ? "Zamena ekrana" : "";
             let popravkakucista = document.getElementById('popravkakucista').checked ? "Popravka kućista" : "";
             let prebacivanjememorije = document.getElementById('prebacivanjememorije').checked ? "Prebacivanje memorije" : "";
 
-          
-            
-        localStorage.setItem('punoime', punoime.toUpperCase());
-          
-        localStorage.setItem('brojtel', brojtel.toUpperCase());
-          
-        localStorage.setItem('Email', Email.toUpperCase());
-           
+            localStorage.setItem('punoime', punoime.toUpperCase());
+            localStorage.setItem('brojtel', brojtel.toUpperCase());
+            localStorage.setItem('Email', Email.toUpperCase());
             localStorage.setItem('popravkaekran', popravkaekran.toUpperCase());
             localStorage.setItem('popravkakucista', popravkakucista.toUpperCase());
             localStorage.setItem('prebacivanjememorije', prebacivanjememorije.toUpperCase());
 
-            
             window.location.href = "Potvrdaokupovini.html";
         });
     </script>
