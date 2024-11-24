@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="icon" href="fav/favicon.ico"> 
-
-    <meta property="og:url" content="https://mihajloga.github.io/phoneprojekat/"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Land line"/>
-    <meta property="og:description" content="Dobrodošli u najbolju prodavnicu mobilnih telefona na celome svetu!"/>
-    <meta property="og:image" content="https://mihajloga.github.io/phoneprojekat/Slike/mob tell.jpg"/>
-    
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Stylesheet.css">
-    <script src="https://kit.fontawesome.com/590dcf6971.js" crossorigin="anonymous"></script>
-    <title>Prodavnica mobilnih telefona</title>
-    <style>
-        :root {
-            --background-color: skyblue;
-        }
-        [data-theme='dark'] {
-            --background-color: lightgreen;
-        }
-        body {
-            background-color: var(--background-color);
-        }
-    </style>
-</head>
-<body>
-
-
-    <h1 class="line">Land line</h1>
-    <h2>Prodavnica mobilnih telefona</h2>
-
-    <button id="Menjatemo">Tema</button>
-    <script>
-        function menjaboju() {
+<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="IE=edge"http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1"name=viewport><link href=fav/favicon.ico rel=icon><meta content=https://mihajloga.github.io/phoneprojekat/ property=og:url><meta content=website property=og:type><meta content="Land line"property=og:title><meta content="Dobrodošli u najbolju prodavnicu mobilnih telefona na celome svetu!"property=og:description><meta content="https://mihajloga.github.io/phoneprojekat/Slike/mob tell.jpg"property=og:image><link href=https://fonts.googleapis.com rel=preconnect><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"rel=stylesheet><link href=Stylesheet.css rel=stylesheet><script crossorigin=anonymous src=https://kit.fontawesome.com/590dcf6971.js></script><title>Prodavnica mobilnih telefona</title><style>:root{--background-color:skyblue}[data-theme=dark]{--background-color:lightgreen}body{background-color:var(--background-color)}</style><h1 class=line>Land line</h1><h2>Prodavnica mobilnih telefona</h2><button id=Menjatemo>Tema</button><script>function menjaboju() {
             let currentTheme = localStorage.getItem('theme');
             if (!currentTheme || currentTheme === 'light') {
                 document.documentElement.setAttribute('data-theme', 'dark');
@@ -50,51 +8,7 @@
                 localStorage.setItem('theme', 'light');
             }
         }
-        document.getElementById('Menjatemo').addEventListener('click', menjaboju);
-    </script>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="ONama.html">O nama</a></li>
-            <li><a href="Proizvodi.html">Proizvodi</a></li>
-            <li><a href="Usluge.html">Usluge</a></li>
-            <li><a href="Kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <div class="kontaktstil">
-            <form id="contactForm">
-                <img id="slika2" src="Slike/tell.jpg" alt="Telefon">
-    
-                <p>Ime i prezime:</p>
-                <input type="text" id="fullName" class="popunavanjeforme" placeholder="Vaše ime i prezime">
-    
-                <p>Broj telefona:</p>
-                <input type="text" id="phoneNumber" inputmode="numeric" pattern="\d*" class="popunavanjeforme" placeholder="Vaš broj telefona">
-    
-                <p>E-mail:</p>
-                <input type="email" id="email" class="popunavanjeforme" placeholder="Vaša e-mail adresa">
-                
-                <p>Unesite vaše pitanje ili problem:</p>
-                <input type="text" id="question" class="popunavanjeforme" placeholder="Vaše pitanje">    <br>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v21.0"></script>
-                <button type="button"><div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div></button>
-                 <br>
-                  <br>
-                <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v21.0"></script>
-               <button type="button"> <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true">like</div></button>
-             <br> 
-                  <br>
-                <button type="button" id="prijava">Pošalji</button>
-            </form>
-        </div>
-    </main>
-    
-    <script>
-        const form = document.getElementById('contactForm');
+        document.getElementById('Menjatemo').addEventListener('click', menjaboju);</script><nav class=navbar><ul><li><a href=ONama.html>O nama</a><li><a href=Proizvodi.html>Proizvodi</a><li><a href=Usluge.html>Usluge</a><li><a href=Kontakt.html>Kontakt</a></ul></nav><main><div class=kontaktstil><form id=contactForm><img alt=Telefon id=slika2 src=Slike/tell.jpg><p>Ime i prezime:</p><input class=popunavanjeforme id=fullName placeholder="Vaše ime i prezime"><p>Broj telefona:</p><input class=popunavanjeforme id=phoneNumber placeholder="Vaš broj telefona"inputmode=numeric pattern=\d*><p>E-mail:</p><input class=popunavanjeforme id=email placeholder="Vaša e-mail adresa"type=email><p>Unesite vaše pitanje ili problem:</p><input class=popunavanjeforme id=question placeholder="Vaše pitanje"><br><div id=fb-root></div><script crossorigin=anonymous src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v21.0"async defer></script><button type=button><div class=fb-share-button data-href=https://developers.facebook.com/docs/plugins/ data-layout=""data-size=""><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse"class=fb-xfbml-parse-ignore target=_blank>Share</a></div></button><br><br><div id=fb-root></div><script crossorigin=anonymous src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v21.0"async defer></script><button type=button><div class=fb-like data-href=https://developers.facebook.com/docs/plugins/ data-layout=""data-size=""data-action=""data-share=true data-width="">like</div></button><br><br><button type=button id=prijava>Pošalji</button></form></div></main><script>const form = document.getElementById('contactForm');
         const prijava = document.getElementById('prijava');
 
         prijava.addEventListener('click', function () {
@@ -116,7 +30,4 @@
 
             alert("Uspešno ste poslali svoje podatke.");
             form.reset(); 
-        });
-    </script>
-</body>
-</html>
+        });</script>
