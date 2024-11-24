@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="icon" href ="fav/favicon.ico">
+   
+    <link rel="icon" href="fav/favicon.ico"> 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="Stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="Stylesheet.css">
     <script src="https://kit.fontawesome.com/590dcf6971.js" crossorigin="anonymous"></script>
-    
-</head>
-<body>
-    <h1 class="line">Land line</h1>
-    <h2>Prodavnica mobilnih telefona</h2>
+    <title>Prodavnica mobilnih telefona</title>
     <style>
         :root {
             --background-color: skyblue;
@@ -28,6 +24,10 @@
             background-color: var(--background-color);
         }
     </style>
+</head>
+<body>
+    <h1 class="line">Land line</h1>
+    <h2>Prodavnica mobilnih telefona</h2>
 
     <button id="Menjatemo">Tema</button>
     <script>
@@ -46,33 +46,29 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="ONama.html">O nama</a> </li>
-
-            <li> <a href="Proizvodi.html">Proizvodi</a></li>
-
-            <li> <a href="Usluge.html">Usluge</a></li>
-
+            <li><a href="ONama.html">O nama</a></li>
+            <li><a href="Proizvodi.html">Proizvodi</a></li>
+            <li><a href="Usluge.html">Usluge</a></li>
             <li><a href="Kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
 
     <main>
-       
         <div class="kontaktstil">
-            <form id="contaktForm">
-                <img id="slika2" src="Slike/tell.jpg" >
+            <form id="contactForm">
+                <img id="slika2" src="Slike/tell.jpg" alt="Telefon">
     
                 <p>Ime i prezime:</p>
-                <input type="text" id="fullName" class="popunavanjeforme">
+                <input type="text" id="fullName" class="popunavanjeforme" placeholder="Vaše ime i prezime">
     
                 <p>Broj telefona:</p>
-                <input type="text" id="phoneNumber" inputmode="numeric" class="popunavanjeforme">
+                <input type="text" id="phoneNumber" inputmode="numeric" pattern="\d*" class="popunavanjeforme" placeholder="Vaš broj telefona">
     
                 <p>E-mail:</p>
-                <input type="email" id="email" class="popunavanjeforme">
+                <input type="email" id="email" class="popunavanjeforme" placeholder="Vaša e-mail adresa">
                 
-                <p>Unesite vase pitanje ili problem:</p>
-                <input type="text" id="question" class="popunavanjeforme">
+                <p>Unesite vaše pitanje ili problem:</p>
+                <input type="text" id="question" class="popunavanjeforme" placeholder="Vaše pitanje">
     
                 <br><br>
                 <button type="button" id="prijava">Pošalji</button>
@@ -81,32 +77,28 @@
     </main>
     
     <script>
-        
-        const form = document.getElementById('contaktForm');
-        
-          const prijava = document.getElementById('prijava');
+        const form = document.getElementById('contactForm');
+        const prijava = document.getElementById('prijava');
 
-        
-          prijava.addEventListener('click', function() {
-            
-           
-         let inputs = document.querySelectorAll('.popunavanjeforme');
-            let svepopuni = true;
+        prijava.addEventListener('click', function () {
+            let inputs = document.querySelectorAll('.popunavanjeforme');
+            let allFieldsFilled = true;
 
-            
-            for (let i = 0; i < inputs.length; i++) {
-                if (inputs[i].value.trim() === '') {
-                   
-                 inputs[i].value = 'prazno polje popunim';
-                   
-                 allFieldsFilled = false;
+            inputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    alert(`Molimo popunite polje: ${input.previousElementSibling.textContent}`);
+                    input.focus();
+                    allFieldsFilled = false;
+                    return;
                 }
-            }
+            });
 
-            if (!svepopuni) {
+            if (!allFieldsFilled) {
                 return;
             }
-            form.submit(); 
+
+            alert("Uspešno ste poslali svoje podatke.");
+            form.reset(); // Clear form fields after submission
         });
     </script>
 </body>
